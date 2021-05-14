@@ -17,7 +17,6 @@ class Entry(models.Model):
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     text = models.TextField()
     data_added = models.DateTimeField(auto_now_add=True)
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name_plural = 'entries'
