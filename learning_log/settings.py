@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     'learning_logs',
     'users',
 
+    # Third party apps.
+    'bootstrap4',
+
     # Default django apps.
     'django.contrib.admin',
     'django.contrib.auth',
@@ -131,3 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # My settings
 LOGIN_URL = 'users:login'
+
+# Heroku Settings
+import django_heroku
+django_heroku.settings(locals())
